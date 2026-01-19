@@ -14,8 +14,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 
         :root {
-            --primary-blue: #2563EB;
-            --primary-purple: #7C3AED;
+            --primary-color: #126A33;
+            --secondary-color: #F07E48;
             --accent-teal: #06D6A0;
             --dark-bg: #0F172A;
             --light-text: #F8FAFC;
@@ -56,7 +56,7 @@
         }
 
         .gradient-text {
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -65,26 +65,26 @@
         .gradient-border {
             border: 2px solid transparent;
             background: linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
-                linear-gradient(90deg, var(--primary-blue), var(--primary-purple)) border-box;
+                linear-gradient(90deg, var(--primary-color), var(--secondary-color)) border-box;
         }
 
         .platform-card {
             transition: all 0.3s ease;
             background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-            border: 1px solid rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(18, 106, 51, 0.1);
             backdrop-filter: blur(10px);
         }
 
         .platform-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(37, 99, 235, 0.3);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+            border-color: rgba(18, 106, 51, 0.3);
+            box-shadow: 0 20px 40px rgba(18, 106, 51, 0.15);
         }
 
         .stats-card {
             transition: all 0.3s ease;
             background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.95));
-            border: 1px solid rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(18, 106, 51, 0.15);
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
@@ -97,7 +97,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
         }
 
         .section-title {
@@ -113,12 +113,12 @@
             right: 0;
             width: 60px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             border-radius: 2px;
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 14px 32px;
             border-radius: 12px;
@@ -134,7 +134,7 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 15px 30px rgba(18, 106, 51, 0.3);
         }
 
         .glass-effect {
@@ -165,23 +165,23 @@
 
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                box-shadow: 0 0 0 0 rgba(18, 106, 51, 0.4);
             }
 
             70% {
-                box-shadow: 0 0 0 20px rgba(37, 99, 235, 0);
+                box-shadow: 0 0 0 20px rgba(18, 106, 51, 0);
             }
 
             100% {
-                box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                box-shadow: 0 0 0 0 rgba(18, 106, 51, 0);
             }
         }
 
         /* Grid Background */
         .grid-pattern {
             background-image:
-                linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+                linear-gradient(rgba(18, 106, 51, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(18, 106, 51, 0.05) 1px, transparent 1px);
             background-size: 40px 40px;
             background-position: center center;
         }
@@ -192,7 +192,7 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(45deg, var(--primary-blue), var(--primary-purple));
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             filter: blur(80px);
             opacity: 0.1;
             animation: float 8s ease-in-out infinite;
@@ -276,14 +276,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(18, 106, 51, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(240, 126, 72, 0.1) 0%, transparent 50%);
         }
 
         /* Floating Elements */
         .floating-element {
             position: absolute;
-            background: linear-gradient(45deg, var(--primary-blue), var(--primary-purple));
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             border-radius: 20px;
             opacity: 0.1;
             filter: blur(40px);
@@ -304,14 +304,34 @@
             right: 10%;
             animation: float 12s ease-in-out infinite reverse;
         }
+
+        /* Navbar Link Underline */
+        .nav-link-underline {
+            position: relative;
+        }
+
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
     </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary-blue': '#2563EB',
-                        'primary-purple': '#7C3AED',
+                        'primary': '#126A33',
+                        'secondary': '#F07E48',
                         'accent-teal': '#06D6A0',
                         'dark-bg': '#0F172A',
                         'light-text': '#F8FAFC',
@@ -337,7 +357,7 @@
                         <img src="tawassu_logo.png" alt="icon" class="w-10 h-10 object-contain">
                     </div>
 
-                    <div class="absolute -inset-2 rounded-full border-2 border-primary-blue/30 animate-ping"></div>
+                    <div class="absolute -inset-2 rounded-full border-2 border-primary/30 animate-ping"></div>
                 </div>
                 <div class="flex flex-col">
                     <span class="text-white font-black text-2xl tracking-tight">توسُـــــع</span>
@@ -347,28 +367,20 @@
 
             <div class="hidden lg:flex items-center gap-12">
                 <a href="#hero"
-                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group">
-                    <span>الرئيسية</span>
-                    <span
-                        class="absolute -bottom-1 right-0 w-0 h-0.5 bg-gradient-to-r from-primary-blue to-primary-purple group-hover:w-full transition-all duration-300"></span>
+                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 nav-link-underline">
+                    الرئيسية
                 </a>
                 <a href="#about"
-                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group">
-                    <span>عن توسُع</span>
-                    <span
-                        class="absolute -bottom-1 right-0 w-0 h-0.5 bg-gradient-to-r from-primary-blue to-primary-purple group-hover:w-full transition-all duration-300"></span>
+                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 nav-link-underline">
+                    عن توسُع
                 </a>
                 <a href="#platforms"
-                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group">
-                    <span>منصاتنا</span>
-                    <span
-                        class="absolute -bottom-1 right-0 w-0 h-0.5 bg-gradient-to-r from-primary-blue to-primary-purple group-hover:w-full transition-all duration-300"></span>
+                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 nav-link-underline">
+                    منصاتنا
                 </a>
                 <a href="#model"
-                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group">
-                    <span>نموذجنا</span>
-                    <span
-                        class="absolute -bottom-1 right-0 w-0 h-0.5 bg-gradient-to-r from-primary-blue to-primary-purple group-hover:w-full transition-all duration-300"></span>
+                    class="text-gray-300 hover:text-white font-medium transition-colors duration-300 nav-link-underline">
+                    نموذجنا
                 </a>
                 <a href="#partners" class="btn-primary">للشراكات</a>
             </div>
@@ -411,16 +423,18 @@
             <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
                     <div
-                        class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-primary-blue/20 to-primary-purple/20 mb-8 backdrop-blur-sm">
+                        class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 mb-8 backdrop-blur-sm">
                         <div class="w-2 h-2 bg-accent-teal rounded-full animate-pulse"></div>
                         <span class="text-accent-teal text-sm font-bold">الحاضنة الأم للمنصات النوعية</span>
                     </div>
 
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-8">
-                        <span class="gradient-text">توسُـــــع</span>
+                        <img src="logoTawassu.png" alt="توسّع"
+                            class="inline-block h-[1em] md:h-[1.1em] lg:h-[1.2em] align-middle mb-2">
                         <br>
                         <span class="text-white">حاضنة المنصات الرقمية</span>
                     </h1>
+
 
                     <h2 class="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed">
                         نحن <span class="text-accent-teal font-bold">حاضنة</span> نطلق وننمي منصات رقمية مستقلة
@@ -436,7 +450,7 @@
                         <a href="#model"
                             class="gradient-border px-8 py-4 rounded-xl text-white hover:bg-white/5 transition-all flex items-center gap-3 group">
                             <i
-                                class="fas fa-play-circle text-primary-blue group-hover:scale-110 transition-transform"></i>
+                                class="fas fa-play-circle text-primary group-hover:scale-110 transition-transform"></i>
                             <span>كيف نعمل؟</span>
                         </a>
                     </div>
@@ -446,7 +460,7 @@
                     <div class="relative floating-animation">
                         <!-- Main Platform Card -->
                         <div
-                            class="bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10 shadow-2xl">
+                            class="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10 shadow-2xl">
                             <div class="text-center mb-8">
                                 <div
                                     class="w-20 h-20 mx-auto bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
@@ -463,7 +477,7 @@
                                     <i class="fas fa-bolt text-white text-sm"></i>
                                 </div>
                                 <div
-                                    class="absolute right-1/4 top-8 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg">
+                                    class="absolute right-1/4 top-8 w-8 h-8 bg-gradient-to-r from-secondary to-orange-500 rounded-full flex items-center justify-center shadow-lg">
                                     <i class="fas fa-chart-line text-white text-sm"></i>
                                 </div>
                                 <div
@@ -478,7 +492,7 @@
                             class="absolute -top-6 -right-6 w-16 h-16 bg-accent-teal/20 rounded-2xl rotate-12 border border-accent-teal/30">
                         </div>
                         <div
-                            class="absolute -bottom-4 -left-4 w-20 h-20 bg-primary-purple/20 rounded-3xl -rotate-12 border border-primary-purple/30">
+                            class="absolute -bottom-4 -left-4 w-20 h-20 bg-secondary/20 rounded-3xl -rotate-12 border border-secondary/30">
                         </div>
                     </div>
                 </div>
@@ -515,7 +529,7 @@
                 <a href="#about" class="flex flex-col items-center gap-3 group cursor-pointer animate-bounce">
                     <span class="text-gray-500 text-sm uppercase tracking-widest">اكتشف المزيد</span>
                     <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center p-1">
-                        <div class="w-1 h-3 bg-gradient-to-b from-primary-blue to-primary-purple rounded-full mt-1">
+                        <div class="w-1 h-3 bg-gradient-to-b from-primary to-secondary rounded-full mt-1">
                         </div>
                     </div>
                 </a>
@@ -540,8 +554,8 @@
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="platform-card p-8 rounded-2xl hover-lift" data-aos="fade-up">
                     <div
-                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-primary-blue/20 to-primary-blue/40 flex items-center justify-center mb-6">
-                        <i class="fas fa-shield-alt text-primary-blue text-2xl"></i>
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-primary/20 to-primary/40 flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-primary text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">مظلة آمنة</h3>
                     <p class="text-gray-400 leading-relaxed">
@@ -551,8 +565,8 @@
 
                 <div class="platform-card p-8 rounded-2xl hover-lift" data-aos="fade-up" data-aos-delay="150">
                     <div
-                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-primary-purple/20 to-primary-purple/40 flex items-center justify-center mb-6">
-                        <i class="fas fa-rocket text-primary-purple text-2xl"></i>
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-secondary/20 to-secondary/40 flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-secondary text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">إطلاق مستقل</h3>
                     <p class="text-gray-400 leading-relaxed">
@@ -593,8 +607,7 @@
                     <div class="p-8">
                         <div class="flex items-center justify-between mb-8">
                             <div class="flex items-center gap-4">
-                                <div
-                                    class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-lg">
+                                <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-lg">
                                     <img src="MatagerlinkLogos.png" alt="icon" class="w-15 h-15 object-contain">
                                 </div>
                                 <div>
@@ -602,7 +615,7 @@
                                     <p class="text-gray-400">منصة التجارة الإلكترونية المتعددة</p>
                                 </div>
                             </div>
-                            <span class="px-3 py-1 bg-primary-blue/20 text-primary-blue text-sm font-bold rounded-full">
+                            <span class="px-3 py-1 bg-primary/20 text-primary text-sm font-bold rounded-full">
                                 نشطة الآن
                             </span>
                         </div>
@@ -635,8 +648,8 @@
                     </div>
 
                     <div
-                        class="relative h-48 bg-gradient-to-r from-primary-blue/10 to-primary-purple/10 border-t border-white/10 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/5 to-primary-purple/5"></div>
+                        class="relative h-48 bg-gradient-to-r from-primary/10 to-secondary/10 border-t border-white/10 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
                         <div class="absolute inset-0 flex items-center justify-center opacity-20">
                             <i class="fas fa-shopping-cart text-9xl text-white"></i>
                         </div>
@@ -663,7 +676,7 @@
                             <span class="text-gray-400 text-sm">تحت التطوير</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <div class="w-2 h-2 bg-primary-blue rounded-full"></div>
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
                             <span class="text-gray-400 text-sm">قيد التخطيط</span>
                         </div>
                     </div>
@@ -694,7 +707,7 @@
                 <div class="relative">
                     <!-- Timeline Line -->
                     <div
-                        class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-blue via-primary-purple to-accent-teal transform -translate-x-1/2 hidden lg:block">
+                        class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent-teal transform -translate-x-1/2 hidden lg:block">
                     </div>
 
                     <!-- Step 1 -->
@@ -702,7 +715,7 @@
                         <div class="lg:w-1/2 lg:pr-12 lg:text-right mb-8 lg:mb-0">
                             <div class="inline-flex items-center gap-3 mb-4">
                                 <div
-                                    class="w-12 h-12 rounded-full bg-gradient-to-r from-primary-blue to-primary-purple flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                    class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-xl shadow-lg">
                                     1
                                 </div>
                                 <h3 class="text-2xl font-bold text-white">اكتشاف الفرصة</h3>
@@ -714,7 +727,7 @@
                         </div>
                         <div class="lg:w-1/2 lg:pl-12">
                             <div class="p-6 platform-card rounded-2xl hover-lift">
-                                <i class="fas fa-lightbulb text-3xl text-primary-blue mb-4"></i>
+                                <i class="fas fa-lightbulb text-3xl text-primary mb-4"></i>
                                 <h4 class="text-xl font-bold text-white mb-2">أبحاث السوق</h4>
                                 <p class="text-gray-400">تحليل دقيق للفرص الرقمية</p>
                             </div>
@@ -725,7 +738,7 @@
                     <div class="flex flex-col lg:flex-row items-center mb-20" data-aos="fade-up" data-aos-delay="150">
                         <div class="lg:w-1/2 lg:pr-12 order-2 lg:order-1">
                             <div class="p-6 platform-card rounded-2xl hover-lift">
-                                <i class="fas fa-palette text-3xl text-primary-purple mb-4"></i>
+                                <i class="fas fa-palette text-3xl text-secondary mb-4"></i>
                                 <h4 class="text-xl font-bold text-white mb-2">هوية مستقلة</h4>
                                 <p class="text-gray-400">تصميم هوية فريدة لكل منصة</p>
                             </div>
@@ -733,7 +746,7 @@
                         <div class="lg:w-1/2 lg:pl-12 order-1 lg:order-2 mb-8 lg:mb-0 lg:text-left">
                             <div class="inline-flex items-center gap-3 mb-4 flex-row-reverse lg:flex-row">
                                 <div
-                                    class="w-12 h-12 rounded-full bg-gradient-to-r from-primary-purple to-pink-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                    class="w-12 h-12 rounded-full bg-gradient-to-r from-secondary to-orange-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
                                     2
                                 </div>
                                 <h3 class="text-2xl font-bold text-white">بناء الهوية</h3>
@@ -789,12 +802,12 @@
 
                     <div class="grid md:grid-cols-2 gap-8 mb-12">
                         <div class="p-6 bg-dark-bg/50 rounded-2xl border border-white/10 hover-lift">
-                            <i class="fas fa-lightbulb text-3xl text-primary-blue mb-4"></i>
+                            <i class="fas fa-lightbulb text-3xl text-primary mb-4"></i>
                             <h4 class="text-xl font-bold text-white mb-2">فكرة مبتكرة</h4>
                             <p class="text-gray-400">منصة متخصصة في مجال معين</p>
                         </div>
                         <div class="p-6 bg-dark-bg/50 rounded-2xl border border-white/10 hover-lift">
-                            <i class="fas fa-handshake text-3xl text-primary-purple mb-4"></i>
+                            <i class="fas fa-handshake text-3xl text-secondary mb-4"></i>
                             <h4 class="text-xl font-bold text-white mb-2">شراكة استراتيجية</h4>
                             <p class="text-gray-400">نموذج أرباح متوازن</p>
                         </div>
@@ -824,13 +837,13 @@
                         <div>
                             <label class="block text-gray-300 mb-3 font-medium">الاسم الكامل</label>
                             <input type="text"
-                                class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary-blue transition-colors"
+                                class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
                                 placeholder="الاسم الثلاثي">
                         </div>
                         <div>
                             <label class="block text-gray-300 mb-3 font-medium">البريد الإلكتروني</label>
                             <input type="email"
-                                class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary-blue transition-colors"
+                                class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
                                 placeholder="email@example.com">
                         </div>
                     </div>
@@ -838,7 +851,7 @@
                     <div>
                         <label class="block text-gray-300 mb-3 font-medium">نوع التواصل</label>
                         <select
-                            class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary-blue transition-colors">
+                            class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors">
                             <option value="">اختر نوع التواصل</option>
                             <option value="investment">فرص استثمارية</option>
                             <option value="partnership">شراكة في منصة جديدة</option>
@@ -850,7 +863,7 @@
                     <div>
                         <label class="block text-gray-300 mb-3 font-medium">الرسالة</label>
                         <textarea rows="5"
-                            class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary-blue transition-colors resize-none"
+                            class="w-full bg-dark-bg border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors resize-none"
                             placeholder="أخبرنا عن فكرتك أو استفسارك..."></textarea>
                     </div>
 
@@ -869,9 +882,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 lg:col-span-2">
                     <a href="#" class="text-3xl font-bold flex items-center gap-3 mb-8">
-                        <div
-                            class="w-12 h-12 rounded-xl bg-white flex items-center justify-center">
-                                    <img src="tawassu_logo.png" alt="icon" class="w-15 h-15 object-contain">
+                        <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center">
+                            <img src="tawassu_logo.png" alt="icon" class="w-15 h-15 object-contain">
                         </div>
                         <div class="flex flex-col">
                             <span class="text-white font-black text-2xl tracking-tight">توسُـــــع</span>
@@ -887,17 +899,17 @@
                 <div>
                     <h4 class="text-white font-bold mb-6 text-xl">منصاتنا</h4>
                     <ul class="space-y-4 text-gray-400">
-                        <li><a href="#" class="hover:text-primary-blue transition-colors flex items-center gap-2">
+                        <li><a href="#" class="hover:text-primary transition-colors flex items-center gap-2">
                                 <i class="fas fa-store text-sm"></i>
                                 متاجر لينك
                             </a></li>
                         <li><a href="#platforms"
-                                class="hover:text-primary-blue transition-colors flex items-center gap-2">
+                                class="hover:text-primary transition-colors flex items-center gap-2">
                                 <i class="fas fa-plus-circle text-sm"></i>
                                 منصات قادمة
                             </a></li>
                         <li><a href="#partners"
-                                class="hover:text-primary-blue transition-colors flex items-center gap-2">
+                                class="hover:text-primary transition-colors flex items-center gap-2">
                                 <i class="fas fa-lightbulb text-sm"></i>
                                 اقترح منصة
                             </a></li>
@@ -908,11 +920,11 @@
                     <h4 class="text-white font-bold mb-6 text-xl">تواصل معنا</h4>
                     <div class="space-y-4 text-gray-400">
                         <p class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-primary-blue"></i>
+                            <i class="fas fa-envelope text-primary"></i>
                             tawassu.ye@gmail.com
                         </p>
                         <p class="flex items-center gap-3">
-                            <i class="fas fa-phone text-primary-purple"></i>
+                            <i class="fas fa-phone text-secondary"></i>
                             <span dir="ltr">+967 775 113 262</span>
                         </p>
 
@@ -930,13 +942,13 @@
                 </p>
 
                 <div class="flex gap-6 text-xl text-gray-400">
-                    <a href="#" class="hover:text-primary-blue transition-colors hover:-translate-y-1">
+                    <a href="#" class="hover:text-primary transition-colors hover:-translate-y-1">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="hover:text-primary-blue transition-colors hover:-translate-y-1">
+                    <a href="#" class="hover:text-primary transition-colors hover:-translate-y-1">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="hover:text-primary-purple transition-colors hover:-translate-y-1">
+                    <a href="#" class="hover:text-secondary transition-colors hover:-translate-y-1">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
