@@ -834,49 +834,56 @@
     <!-- Contact Form -->
     <section id="contact-form" class="section-spacing">
         <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <div class="platform-card rounded-3xl p-8 lg:p-12 bg-gradient-to-br from-primary/20 to-secondary/20">
-                <div class="text-center mb-12">
+            <div
+                class="platform-card rounded-3xl p-8 lg:p-12 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 relative overflow-hidden">
+                <!-- Inner glow -->
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 blur-3xl rounded-full"></div>
+                <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-secondary/20 blur-3xl rounded-full"></div>
+
+                <div class="relative z-10 text-center mb-12">
                     <h2 class="text-3xl lg:text-4xl font-black text-white mb-6">تواصل مع <span
                             class="gradient-text">توسُـــــع</span></h2>
-                    <p class="text-gray-300">للاستثمار، الشراكة، أو الاستفسارات العامة</p>
+                    <p class="text-gray-300 font-medium">للاستثمار، الشراكة، أو الاستفسارات العامة</p>
                 </div>
 
-                <form id="contact-form" class="space-y-8">
+                <form id="contact-form" class="relative z-10 space-y-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
-                            <label class="block text-gray-300 mb-3 font-medium">الاسم الكامل</label>
+                            <label class="block text-white mb-3 font-bold text-sm">الاسم الكامل</label>
                             <input type="text" name="name"
-                                class="w-full border-white/10 rounded-xl px-6 py-4 text-gray-300 focus:outline-none focus:border-primary transition-colors"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all"
                                 placeholder="الاسم الثلاثي" required>
                         </div>
                         <div>
-                            <label class="block text-gray-300 mb-3 font-medium">البريد الإلكتروني</label>
+                            <label class="block text-white mb-3 font-bold text-sm">البريد الإلكتروني</label>
                             <input type="email" name="email"
-                                class="w-full border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all"
                                 placeholder="email@example.com" required>
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-gray-300 mb-3 font-medium">نوع التواصل</label>
+                        <label class="block text-white mb-3 font-bold text-sm">نوع التواصل</label>
                         <select name="contactType" required
-                            class="w-full bg-gradient-to-br from-primary/20 to-secondary/20 border border-white/10 rounded-xl px-6 py-2 text-gray-700 focus:outline-none focus:border-primary transition-colors">
-                            <option value="">اختر نوع التواصل</option>
-                            <option value="فرص استثمارية">فرص استثمارية</option>
-                            <option value="شراكة في منصة جديدة">شراكة في منصة جديدة</option>
-                            <option value="استفسارات عامة">استفسارات عامة</option>
-                            <option value="فرص عمل">فرص عمل</option>
+                            class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all appearance-none cursor-pointer">
+                            <option value="" class="bg-[#153116] text-white">اختر نوع التواصل</option>
+                            <option value="فرص استثمارية" class="bg-[#153116] text-white">فرص استثمارية</option>
+                            <option value="شراكة في منصة جديدة" class="bg-[#153116] text-white">شراكة في منصة جديدة
+                            </option>
+                            <option value="استفسارات عامة" class="bg-[#153116] text-white">استفسارات عامة</option>
+                            <option value="فرص عمل" class="bg-[#153116] text-white">فرص عمل</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-gray-300 mb-3 font-medium">الرسالة</label>
+                        <label class="block text-white mb-3 font-bold text-sm">الرسالة</label>
                         <textarea name="message" rows="5"
-                            class="w-full bg-gradient-to-br from-primary/20 to-secondary/20 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors resize-none"
+                            class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all resize-none"
                             placeholder="أخبرنا عن فكرتك أو استفسارك..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary w-full py-5 text-lg font-bold">
+                    <button type="submit"
+                        class="btn-primary w-full py-5 text-lg font-black shadow-xl hover:shadow-primary/20">
                         <i class="fas fa-paper-plane ml-3"></i>
                         إرسال عبر واتساب
                     </button>
