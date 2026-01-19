@@ -30,6 +30,8 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -37,6 +39,7 @@
             background-color: var(--dark-bg);
             color: var(--light-text);
             overflow-x: hidden;
+            width: 100%;
             min-height: 100vh;
         }
 
@@ -228,6 +231,15 @@
                 padding-top: 80px;
                 padding-bottom: 80px;
             }
+
+            h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+
+            h2 {
+                font-size: 1.25rem !important;
+            }
         }
 
         /* Fix for Stats Row */
@@ -240,8 +252,8 @@
 
         .stats-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
             margin-top: 40px;
         }
 
@@ -1034,30 +1046,30 @@
             observer.observe(card);
         });
 
-       
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
 
-    const form = e.target;
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    const name = encodeURIComponent(form.querySelector('[name="name"]').value);
-    const email = encodeURIComponent(form.querySelector('[name="email"]').value);
-    const type = encodeURIComponent(form.querySelector('[name="contactType"]').value);
-    const message = encodeURIComponent(form.querySelector('[name="message"]').value);
+            const form = e.target;
 
-    const whatsappNumber = "967775113262"; // بدون +
-    
-    const whatsappURL =
-        `https://wa.me/${whatsappNumber}?text=` +
-        `📩 *رسالة جديدة من الموقع*%0A` +
-        `————————————%0A` +
-        `👤 الاسم: ${name}%0A` +
-        `📧 البريد: ${email}%0A` +
-        `📌 نوع التواصل: ${type}%0A` +
-        `💬 الرسالة:%0A${message}`;
+            const name = encodeURIComponent(form.querySelector('[name="name"]').value);
+            const email = encodeURIComponent(form.querySelector('[name="email"]').value);
+            const type = encodeURIComponent(form.querySelector('[name="contactType"]').value);
+            const message = encodeURIComponent(form.querySelector('[name="message"]').value);
 
-    window.location.href = whatsappURL; // ✔️ أفضل من window.open
-});
+            const whatsappNumber = "967775113262"; // بدون +
+
+            const whatsappURL =
+                `https://wa.me/${whatsappNumber}?text=` +
+                `📩 *رسالة جديدة من الموقع*%0A` +
+                `————————————%0A` +
+                `👤 الاسم: ${name}%0A` +
+                `📧 البريد: ${email}%0A` +
+                `📌 نوع التواصل: ${type}%0A` +
+                `💬 الرسالة:%0A${message}`;
+
+            window.location.href = whatsappURL; // ✔️ أفضل من window.open
+        });
 
 
     </script>
