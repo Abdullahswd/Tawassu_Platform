@@ -134,10 +134,10 @@
             box-shadow: 0 15px 30px rgba(18, 106, 51, 0.3);
         }
 
-    .glass-effect {
-    background: linear-gradient(to top, var(--secondary-color), var(--secondary-color));
-    backdrop-filter: blur(1px);
-}
+        .glass-effect {
+            background: linear-gradient(to top, var(--secondary-color), var(--secondary-color));
+            backdrop-filter: blur(1px);
+        }
 
         .floating-animation {
             animation: float 6s ease-in-out infinite;
@@ -829,44 +829,44 @@
                     <p class="text-gray-300">للاستثمار، الشراكة، أو الاستفسارات العامة</p>
                 </div>
 
-                <form class="space-y-8">
+                <form id="contact-form" class="space-y-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
                             <label class="block text-gray-300 mb-3 font-medium">الاسم الكامل</label>
-                            <input type="text"
+                            <input type="text" name="name"
                                 class="w-full border-white/10 rounded-xl px-6 py-4 text-gray-300 focus:outline-none focus:border-primary transition-colors"
-                                placeholder="الاسم الثلاثي">
+                                placeholder="الاسم الثلاثي" required>
                         </div>
                         <div>
                             <label class="block text-gray-300 mb-3 font-medium">البريد الإلكتروني</label>
-                            <input type="email"
+                            <input type="email" name="email"
                                 class="w-full border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                                placeholder="email@example.com">
+                                placeholder="email@example.com" required>
                         </div>
                     </div>
 
                     <div>
                         <label class="block text-gray-300 mb-3 font-medium">نوع التواصل</label>
-                        <select
+                        <select name="contactType" required
                             class="w-full bg-gradient-to-br from-primary/20 to-secondary/20 border border-white/10 rounded-xl px-6 py-2 text-gray-700 focus:outline-none focus:border-primary transition-colors">
                             <option value="">اختر نوع التواصل</option>
-                            <option value="investment">فرص استثمارية</option>
-                            <option value="partnership">شراكة في منصة جديدة</option>
-                            <option value="general">استفسارات عامة</option>
-                            <option value="career">فرص عمل</option>
+                            <option value="فرص استثمارية">فرص استثمارية</option>
+                            <option value="شراكة في منصة جديدة">شراكة في منصة جديدة</option>
+                            <option value="استفسارات عامة">استفسارات عامة</option>
+                            <option value="فرص عمل">فرص عمل</option>
                         </select>
                     </div>
 
                     <div>
                         <label class="block text-gray-300 mb-3 font-medium">الرسالة</label>
-                        <textarea rows="5"
+                        <textarea name="message" rows="5"
                             class="w-full bg-gradient-to-br from-primary/20 to-secondary/20 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors resize-none"
-                            placeholder="أخبرنا عن فكرتك أو استفسارك..."></textarea>
+                            placeholder="أخبرنا عن فكرتك أو استفسارك..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn-primary w-full py-5 text-lg font-bold">
                         <i class="fas fa-paper-plane ml-3"></i>
-                        إرسال الطلب
+                        إرسال عبر واتساب
                     </button>
                 </form>
             </div>
@@ -1013,12 +1013,7 @@
             }
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('شكراً لتواصلكم! سنعود إليكم قريباً.');
-            this.reset();
-        });
+
 
         // Add animation to stats cards on scroll
         const observerOptions = {
@@ -1038,6 +1033,33 @@
         document.querySelectorAll('.stats-card').forEach(card => {
             observer.observe(card);
         });
+
+       
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const name = encodeURIComponent(form.querySelector('[name="name"]').value);
+    const email = encodeURIComponent(form.querySelector('[name="email"]').value);
+    const type = encodeURIComponent(form.querySelector('[name="contactType"]').value);
+    const message = encodeURIComponent(form.querySelector('[name="message"]').value);
+
+    const whatsappNumber = "967775113262"; // بدون +
+    
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=` +
+        `📩 *رسالة جديدة من الموقع*%0A` +
+        `————————————%0A` +
+        `👤 الاسم: ${name}%0A` +
+        `📧 البريد: ${email}%0A` +
+        `📌 نوع التواصل: ${type}%0A` +
+        `💬 الرسالة:%0A${message}`;
+
+    window.location.href = whatsappURL; // ✔️ أفضل من window.open
+});
+
+
     </script>
 </body>
 
